@@ -110,12 +110,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   readonly email = 'tiwarisaket3@gmail.com';
   copyStatus = '';
+  private copyStatusTimer?: ReturnType<typeof setTimeout>;
 
   async copyEmail(): Promise<void> {
     try {
       await navigator.clipboard.writeText(this.email);
+      clearTimeout(this.copyStatusTimer);
       this.copyStatus = 'Email address copied.';
+      this.copyStatusTimer = setTimeout(() => {
+        this.copyStatus = '';
+      }, 2000);
     } catch {
+      clearTimeout(this.copyStatusTimer);
       this.copyStatus = 'Clipboard unavailable. Select and copy the address above.';
     }
   }
