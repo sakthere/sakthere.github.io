@@ -1,0 +1,23 @@
+.impact-list li {
+  padding: .45rem 0;
+}
+
+.impact-list strong {
+  color: var(--color-text-primary);
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: 1.25rem;
+  color: var(--color-accent-hover);
+  font-weight: 700;
+  text-underline-offset: .25em;
+}
+
+.featured .project-link {
+  color: var(--color-accent-subtle);
+}
+
+.featured .project-link:focus-visible {
+  outline-color: var(--color-accent-subtle);
+}
