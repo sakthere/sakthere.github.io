@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
           </div>
         </div>
         <div class="portrait-wrap">
-          <img src="assets/saket-tiwari-headshot.jpeg" alt="Saket Tiwari" class="portrait" width="1122" height="1402" fetchpriority="high">
+          <img src="assets/saket-tiwari-navy-suit.png" alt="Saket Tiwari in a navy suit" class="portrait" width="1086" height="1131" fetchpriority="high">
         </div>
       </section>
       <section class="proof section recruiter-proof" aria-label="Fleet platform results at Accenture">
