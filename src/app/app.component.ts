@@ -69,10 +69,32 @@ import { Component } from '@angular/core';
           <p class="eyebrow">WRITING</p>
           <div>
             <h2 id="writing-heading">Notes on distributed systems</h2>
-            <p class="lede">I’ve published 16 articles on distributed systems. Find the collection on Medium.</p>
-            <a class="text-link" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">Read my articles on Medium</a>
+            <p class="lede">Selected articles on how distributed systems fail and what makes them easier to operate.</p>
           </div>
         </div>
+        <div class="writing-grid">
+          <article class="writing-card">
+            <p class="eyebrow">CACHING</p>
+            <h3><a href="https://medium.com/stackademic/the-cache-expired-and-the-database-fell-over-dac3f7249b25" target="_blank" rel="noopener noreferrer">The Cache Expired and the Database Fell Over</a></h3>
+            <p>Why a cache expiry can send a wave of traffic to the database, and what that means for the reliability of a cached system.</p>
+          </article>
+          <article class="writing-card">
+            <p class="eyebrow">RESILIENCE</p>
+            <h3><a href="https://medium.com/stackademic/your-retries-are-why-the-outage-didnt-end-c5acbc53ec7c" target="_blank" rel="noopener noreferrer">Your Retries Are Why the Outage Didn’t End</a></h3>
+            <p>How retrying failed requests can add load to a struggling service and make recovery harder.</p>
+          </article>
+          <article class="writing-card">
+            <p class="eyebrow">RELIABLE MESSAGING</p>
+            <h3><a href="https://medium.com/stackademic/your-database-committed-your-message-never-left-817818fc7fa6" target="_blank" rel="noopener noreferrer">Your Database Committed. Your Message Never Left.</a></h3>
+            <p>What can go wrong between committing a database transaction and publishing the event that other services depend on.</p>
+          </article>
+          <article class="writing-card">
+            <p class="eyebrow">FAILURE ANALYSIS</p>
+            <h3><a href="https://medium.com/&#64;tiwarisaket3/eight-failure-modes-and-the-four-bugs-underneath-them-9d7faa3dd4ce" target="_blank" rel="noopener noreferrer">Eight Failure Modes and the Four Bugs Underneath Them</a></h3>
+            <p>A look at how different failure symptoms can trace back to the same underlying bugs.</p>
+          </article>
+        </div>
+        <p class="writing-footer"><a class="text-link" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
       </section>
       <section class="section recognition"><p class="eyebrow">RECOGNITION & EDUCATION</p><div><h2>Thoughtful delivery,<br>recognized impact.</h2><div class="recognition-list"><p><strong>Client appreciation</strong><span>Accenture · Critical production fixes</span></p><p><strong>Insta Award</strong><span>Infosys · Consistent high performance</span></p><p><strong>B.Tech (Honours), Computer Science and Engineering</strong><span>Dr. APJ Abdul Kalam Technical University · 2018–2022 · 8.0/10</span></p></div></div></section>
       <section id="contact" class="contact"><p class="eyebrow">04 / CONTACT</p><h2>Have an important system to build?</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">tiwarisaket3&#64;gmail.com</a><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
