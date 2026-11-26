@@ -249,6 +249,27 @@
   padding: .45rem 0;
 }
 
+.company .company-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: .15rem .6rem;
+  margin-right: .35rem;
+  border: 1px solid var(--color-border);
+  border-radius: .375rem;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent-hover);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+
+.company .company-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
 .impact-list strong {
   color: var(--color-text-primary);
 }
