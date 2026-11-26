@@ -19,7 +19,6 @@ import { Component } from '@angular/core';
           <p class="lede">I build enterprise applications from API to interface. At Accenture and Infosys, my work has spanned secure ASP.NET Core services, Angular workflows, and performance tuning for production systems. I also prototype AI features that help users explore data in natural language.</p>
           <div class="actions">
             <a class="button" href="assets/Saket-Tiwari-Resume.pdf" download>Download résumé</a>
-            <a class="text-link" href="#work">View selected work</a>
             <a class="text-link" href="#contact">Let’s work together</a>
           </div>
         </div>
