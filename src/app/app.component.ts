@@ -4,46 +4,30 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   standalone: true,
   template: `
-    <a class="skip-link" href="#top">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Saket Tiwari, home">ST<span>.</span></a>
-      <nav class="desktop-nav" aria-label="Primary"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#writing">Writing</a><a href="#skills">Expertise</a><a href="#contact">Contact</a></nav>
-      <details class="mobile-nav" #mobileMenu>
-        <summary>Sections</summary>
-        <nav aria-label="Sections" (click)="navigateFromMenu($event, mobileMenu)"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#writing">Writing</a><a href="#skills">Expertise</a><a href="#contact">Contact</a></nav>
-      </details>
-      <label class="theme-control"><span>Theme</span>
-        <select aria-label="Color theme" [value]="theme" (change)="setTheme($event)">
-          <option value="system">System</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </label>
-      <a class="header-link" href="assets/Saket-Tiwari-Resume.pdf" download>Résumé</a>
-    </header>
-    <main id="top" tabindex="-1">
+    <header class="site-header"><a class="wordmark" href="#top">ST<span>.</span></a><nav aria-label="Primary"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Expertise</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav><a class="header-link" href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></header>
+    <main id="top">
       <section class="hero section">
         <div class="hero-copy">
+          <p class="eyebrow">GURUGRAM, INDIA</p>
           <h1>Saket Tiwari</h1>
           <p class="hero-role">Full Stack .NET Developer · Angular, Azure & Applied AI</p>
-          <p class="lede">I build enterprise software with .NET, Angular, and Azure. At Accenture, I work on a fleet platform serving 50,000+ monthly active users, alongside prototypes that let users explore data in natural language.</p>
+          <p class="lede">I build enterprise applications from API to interface. At Accenture and Infosys, my work has spanned secure ASP.NET Core services, Angular workflows, and performance tuning for production systems. I also prototype AI features that help users explore data in natural language.</p>
           <div class="actions">
             <a class="button" href="assets/Saket-Tiwari-Resume.pdf" download>Download résumé</a>
             <a class="text-link" href="#work">View selected work</a>
             <a class="text-link" href="#contact">Let’s work together</a>
           </div>
         </div>
-        <figure class="portrait-wrap">
+        <div class="portrait-wrap">
           <img src="assets/saket-tiwari-navy-suit.png" alt="Saket Tiwari in a navy suit" class="portrait" width="1086" height="1131" fetchpriority="high">
-          <figcaption>Gurugram, India</figcaption>
-        </figure>
+        </div>
       </section>
       <section class="proof section recruiter-proof" aria-label="Fleet platform results at Accenture">
         <article><strong>50K+</strong><span>monthly active users on the fleet-management platform</span></article>
         <article><strong>~30%</strong><span>lower P95 latency on a high-traffic transaction flow</span></article>
         <article><strong>25%</strong><span>less SQL query time on large transactional tables</span></article>
       </section>
-      <section id="experience" class="section experience"><div class="section-intro"><p class="eyebrow">CAREER</p><h2>Experience</h2></div><div class="timeline"><article class="role"><div class="role-meta"><span>Jul 2024 — Present</span><span>Gurugram, India</span></div><div><h3>Full Stack .NET Developer</h3><p class="company"><a class="text-link" href="https://www.accenture.com/en" target="_blank" rel="noopener noreferrer">Accenture</a> <span>· Packaged App Development Analyst</span></p><p>Developing a fleet-management platform for 50,000+ monthly active users. I work across transaction flows, secure APIs, asynchronous services, and production observability.</p><ul class="impact-list"><li><strong>Transaction performance.</strong> Separated reads and writes with CQRS so read-heavy endpoints could scale independently. P95 latency fell by about 30%.</li><li><strong>Asynchronous messaging.</strong> Moved notification delivery to Azure Service Bus to isolate notification failures from the transaction flow.</li><li><strong>API delivery.</strong> Shipped 15+ JWT-secured REST APIs and Azure Functions jobs through Azure DevOps CI/CD.</li><li><strong>Database performance.</strong> Analyzed SQL Server execution plans and redesigned indexes, cutting query time by 25% on large transactional tables.</li><li><strong>Production reliability.</strong> Diagnosed 50+ incidents with client stakeholders using Application Insights. Repeat downtime incidents fell by 20%.</li><li><strong>AI prototyping and mentoring.</strong> Explored prompt-based fleet analytics with Azure AI and LLMs, and mentored four junior developers through reviews and knowledge-sharing sessions.</li></ul></div></article><article class="role"><div class="role-meta"><span>Jun 2022 — Jul 2024</span><span>Gurugram, India</span></div><div><h3>Full Stack .NET Developer</h3><p class="company"><a class="text-link" href="https://www.infosys.com/" target="_blank" rel="noopener noreferrer">Infosys</a> <span>· Digital Specialist Engineer</span></p><p>Built enterprise applications for a Big Four audit and advisory client, with a focus on scalable services and responsive workflow interfaces.</p><ul class="impact-list"><li><strong>Data access.</strong> Tuned EF Core and LINQ queries and database indexes on high-volume datasets, improving retrieval time by 20%.</li><li><strong>Service development.</strong> Delivered 20+ REST APIs across modular ASP.NET Core microservices supporting complex audit and advisory workflows.</li><li><strong>Frontend delivery.</strong> Built responsive Angular workflow screens with reactive forms, validation, and state management connected to backend services.</li><li><strong>Automated testing.</strong> Added xUnit and Moq tests alongside each feature to improve coverage and reliability.</li></ul></div></article></div></section>
+      <section id="experience" class="section experience"><div class="section-intro"><p class="eyebrow">01 / EXPERIENCE</p><h2>Engineering systems that hold up under pressure.</h2></div><div class="timeline"><article class="role"><div class="role-meta"><span>Jul 2024 — Present</span><span>Gurugram, India</span></div><div><h3>Full Stack .NET Developer</h3><p class="company"><a class="text-link" href="https://www.accenture.com/en" target="_blank" rel="noopener noreferrer">Accenture</a> <span>· Packaged App Development Analyst</span></p><p>Developing a fleet-management platform for 50,000+ monthly active users. I work across transaction flows, secure APIs, asynchronous services, and production observability.</p><ul class="impact-list"><li><strong>Transaction performance.</strong> Separated reads and writes with CQRS so read-heavy endpoints could scale independently. P95 latency fell by about 30%.</li><li><strong>Asynchronous messaging.</strong> Moved notification delivery to Azure Service Bus to isolate notification failures from the transaction flow.</li><li><strong>API delivery.</strong> Shipped 15+ JWT-secured REST APIs and Azure Functions jobs through Azure DevOps CI/CD.</li><li><strong>Database performance.</strong> Analyzed SQL Server execution plans and redesigned indexes, cutting query time by 25% on large transactional tables.</li><li><strong>Production reliability.</strong> Diagnosed 50+ incidents with client stakeholders using Application Insights. Repeat downtime incidents fell by 20%.</li><li><strong>AI prototyping and mentoring.</strong> Explored prompt-based fleet analytics with Azure AI and LLMs, and mentored four junior developers through reviews and knowledge-sharing sessions.</li></ul></div></article><article class="role"><div class="role-meta"><span>Jun 2022 — Jul 2024</span><span>Gurugram, India</span></div><div><h3>Full Stack .NET Developer</h3><p class="company"><a class="text-link" href="https://www.infosys.com/" target="_blank" rel="noopener noreferrer">Infosys</a> <span>· Digital Specialist Engineer</span></p><p>Built enterprise applications for a Big Four audit and advisory client, with a focus on scalable services and responsive workflow interfaces.</p><ul class="impact-list"><li><strong>Data access.</strong> Tuned EF Core and LINQ queries and database indexes on high-volume datasets, improving retrieval time by 20%.</li><li><strong>Service development.</strong> Delivered 20+ REST APIs across modular ASP.NET Core microservices supporting complex audit and advisory workflows.</li><li><strong>Frontend delivery.</strong> Built responsive Angular workflow screens with reactive forms, validation, and state management connected to backend services.</li><li><strong>Automated testing.</strong> Added xUnit and Moq tests alongside each feature to improve coverage and reliability.</li></ul></div></article></div></section>
       <section id="work" class="section work">
         <div class="section-intro"><p class="eyebrow">SELECTED WORK</p><h2>Projects and design decisions</h2></div>
         <div class="case-study-grid">
@@ -79,6 +63,7 @@ import { Component } from '@angular/core';
           </article>
         </div>
       </section>
+      <section id="skills" class="section skills"><div class="section-intro"><p class="eyebrow">03 / EXPERTISE</p><h2>A balanced full-stack practice.</h2></div><div class="skill-grid"><article><h3>Backend & architecture</h3><p>C# · ASP.NET Core · .NET Core · EF Core · REST APIs · JWT · LINQ · CQRS · Microservices</p></article><article><h3>Frontend craft</h3><p>Angular · TypeScript · JavaScript · HTML5 · CSS3 · Reactive Forms</p></article><article><h3>Cloud & delivery</h3><p>Azure App Service · Functions · Service Bus · Blob Storage · Key Vault · Azure DevOps · Docker</p></article><article><h3>Applied AI</h3><p>Azure AI · Generative AI · Retrieval-Augmented Generation (RAG) · OpenAI · Claude API · Prompt Engineering · Python</p></article><article><h3>Data & performance</h3><p>SQL Server · Query Execution Plans · Index Design</p></article><article><h3>Testing & operations</h3><p>xUnit · Moq · Playwright · Application Insights · Git · CI/CD</p></article></div></section>
       <section id="writing" class="section writing" aria-labelledby="writing-heading">
         <div class="section-intro">
           <p class="eyebrow">WRITING</p>
@@ -111,49 +96,18 @@ import { Component } from '@angular/core';
         </div>
         <p class="writing-footer"><a class="text-link" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
       </section>
-      <section id="skills" class="section skills"><div class="section-intro"><p class="eyebrow">EXPERTISE</p><h2>Tools and practices</h2></div><div class="skill-grid"><article><h3>Backend & architecture</h3><p>C# · ASP.NET Core · .NET Core · EF Core · REST APIs · JWT · LINQ · CQRS · Microservices</p></article><article><h3>Frontend craft</h3><p>Angular · TypeScript · JavaScript · HTML5 · CSS3 · Reactive Forms</p></article><article><h3>Cloud & delivery</h3><p>Azure App Service · Functions · Service Bus · Blob Storage · Key Vault · Azure DevOps · Docker</p></article><article><h3>Applied AI</h3><p>Azure AI · Generative AI · Retrieval-Augmented Generation (RAG) · OpenAI · Claude API · Prompt Engineering · Python</p></article><article><h3>Data & performance</h3><p>SQL Server · Query Execution Plans · Index Design</p></article><article><h3>Testing & operations</h3><p>xUnit · Moq · Playwright · Application Insights · Git · CI/CD</p></article></div></section>
-      <section class="section recognition"><p class="eyebrow">BACKGROUND</p><div><h2>Recognition & education</h2><div class="recognition-list"><p><strong>Client appreciation</strong><span>Accenture · Critical production fixes</span></p><p><strong>Insta Award</strong><span>Infosys · Consistent high performance</span></p><p><strong>B.Tech (Honours), Computer Science and Engineering</strong><span>Dr. APJ Abdul Kalam Technical University · 2018–2022 · 8.0/10</span></p></div></div></section>
-      <section id="contact" class="contact"><p class="eyebrow">CONTACT</p><h2>Get in touch</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">{{ email }}</a>
+      <section class="section recognition"><p class="eyebrow">RECOGNITION & EDUCATION</p><div><h2>Thoughtful delivery,<br>recognized impact.</h2><div class="recognition-list"><p><strong>Client appreciation</strong><span>Accenture · Critical production fixes</span></p><p><strong>Insta Award</strong><span>Infosys · Consistent high performance</span></p><p><strong>B.Tech (Honours), Computer Science and Engineering</strong><span>Dr. APJ Abdul Kalam Technical University · 2018–2022 · 8.0/10</span></p></div></div></section>
+      <section id="contact" class="contact"><p class="eyebrow">04 / CONTACT</p><h2>Have an important system to build?</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">{{ email }}</a>
         <div class="contact-actions">
           <button type="button" class="button" (click)="copyEmail()">Copy email address</button>
           <a class="text-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tiwarisaket3%40gmail.com" target="_blank" rel="noopener noreferrer">Compose in Gmail</a>
         </div>
         <p class="copy-status" [class.is-visible]="copyStatusVisible" role="status">{{ copyStatus }}</p><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
-    </main><footer><span>© 2026 Saket Tiwari</span><a href="#top">Back to top</a></footer>
-  `
+    </main><footer><span>© 2026 Saket Tiwari</span><span>Full Stack .NET Developer · Azure & AI</span></footer>
+  `,
+  styleUrl: '../styles.css'
 })
 export class AppComponent {
-  theme = document.documentElement.dataset['theme'] ?? 'system';
-
-  navigateFromMenu(event: MouseEvent, menu: HTMLDetailsElement): void {
-    const link = (event.target as HTMLElement).closest('a');
-    if (!link?.hash || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-
-    event.preventDefault();
-    menu.open = false;
-    const destination = document.getElementById(link.hash.slice(1));
-    if (!destination) return;
-
-    destination.tabIndex = -1;
-    destination.focus({ preventScroll: true });
-    if (location.hash === link.hash) {
-      destination.scrollIntoView();
-    } else {
-      location.hash = link.hash;
-    }
-  }
-
-  setTheme(event: Event): void {
-    const value = (event.target as HTMLSelectElement).value;
-    this.theme = value;
-    document.documentElement.dataset['theme'] = value;
-    try {
-      localStorage.setItem('portfolio-theme', value);
-    } catch {
-      // The page can still switch themes when storage is unavailable.
-    }
-  }
-
   readonly email = 'tiwarisaket3@gmail.com';
   copyStatus = '';
   copyStatusVisible = false;
