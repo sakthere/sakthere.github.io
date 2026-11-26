@@ -1,3 +1,9 @@
+.hero-detail {
+  max-width: 60ch;
+  color: var(--color-text-secondary);
+  margin: -1rem 0 1.875rem;
+}
+
 .impact-list li {
   padding: .45rem 0;
 }
