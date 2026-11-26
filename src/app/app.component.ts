@@ -49,8 +49,16 @@ import { Component } from '@angular/core';
           <article class="project secondary-project">
             <p class="project-type">IN PROGRESS · APPLIED AI</p>
             <h3>JobHunter</h3>
-            <p>A local-first job application assistant. It uses one verified candidate profile to draft tailored materials and pre-fill forms, with explicit approval before submission.</p>
+            <p>A local-first assistant for preparing and reviewing job applications from one verified candidate profile.</p>
             <ul class="tags"><li>TypeScript</li><li>.NET Core</li><li>Claude API</li><li>Playwright</li></ul>
+            <dl class="case-details">
+              <dt>Verified profile</dt>
+              <dd>Reuse candidate details across applications and use verified data to pre-fill forms.</dd>
+              <dt>AI drafting</dt>
+              <dd>Generate tailored cover letters and résumé adjustments with Claude behind a swappable provider layer.</dd>
+              <dt>Review before submission</dt>
+              <dd>Playwright handles form pre-fill. Submission requires explicit approval.</dd>
+            </dl>
             <a class="project-link" href="https://github.com/sakthere?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub repositories</a>
           </article>
         </div>

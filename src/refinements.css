@@ -32,7 +32,7 @@
 .case-study-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
-  align-items: start;
+  align-items: stretch;
   gap: 1.25rem;
 }
 
@@ -40,8 +40,12 @@
   margin-top: 0;
 }
 
+.case-study-grid .project-link {
+  margin-top: auto;
+}
+
 .case-details {
-  margin: 1rem 0 0;
+  margin: 1rem 0 1.25rem;
 }
 
 .case-details dt {
