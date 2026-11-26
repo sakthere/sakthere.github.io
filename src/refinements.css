@@ -101,6 +101,8 @@
 }
 
 .writing-card {
+  display: flex;
+  flex-direction: column;
   padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
@@ -111,15 +113,19 @@
   font: 700 clamp(1.35rem, 2vw, 1.75rem)/1.2 var(--serif);
 }
 
-.writing-card h3 a {
-  color: var(--color-text-primary);
-  text-decoration-color: var(--color-accent);
-  text-underline-offset: .18em;
+.writing-card > p:not(.eyebrow) {
+  margin: .85rem 0 1rem;
+  color: var(--color-text-secondary);
 }
 
-.writing-card > p:last-child {
-  margin: .85rem 0 0;
-  color: var(--color-text-secondary);
+.writing-article-link {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--color-accent-hover);
+  font-size: .875rem;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
 }
 
 .writing-footer {
@@ -162,7 +168,7 @@
     box-shadow: 0 5px 16px color-mix(in srgb, var(--color-text-primary) 8%, transparent);
   }
 
-  .writing-card h3 a:hover,
+  .writing-article-link:hover,
   .text-link:hover,
   .project-link:hover {
     color: var(--color-accent-hover);

@@ -79,23 +79,27 @@ import { Component } from '@angular/core';
         <div class="writing-grid">
           <article class="writing-card">
             <p class="eyebrow">CACHING</p>
-            <h3><a href="https://medium.com/stackademic/the-cache-expired-and-the-database-fell-over-dac3f7249b25" target="_blank" rel="noopener noreferrer">The Cache Expired and the Database Fell Over</a></h3>
+            <h3 id="article-dac3f7249b25">The Cache Expired and the Database Fell Over</h3>
             <p>Why a cache expiry can send a wave of traffic to the database, and what that means for the reliability of a cached system.</p>
+            <a class="writing-article-link" href="https://medium.com/stackademic/the-cache-expired-and-the-database-fell-over-dac3f7249b25" target="_blank" rel="noopener noreferrer" aria-labelledby="article-dac3f7249b25-link article-dac3f7249b25"><span id="article-dac3f7249b25-link">Read on Medium</span></a>
           </article>
           <article class="writing-card">
             <p class="eyebrow">RESILIENCE</p>
-            <h3><a href="https://medium.com/stackademic/your-retries-are-why-the-outage-didnt-end-c5acbc53ec7c" target="_blank" rel="noopener noreferrer">Your Retries Are Why the Outage Didn’t End</a></h3>
+            <h3 id="article-c5acbc53ec7c">Your Retries Are Why the Outage Didn’t End</h3>
             <p>How retrying failed requests can add load to a struggling service and make recovery harder.</p>
+            <a class="writing-article-link" href="https://medium.com/stackademic/your-retries-are-why-the-outage-didnt-end-c5acbc53ec7c" target="_blank" rel="noopener noreferrer" aria-labelledby="article-c5acbc53ec7c-link article-c5acbc53ec7c"><span id="article-c5acbc53ec7c-link">Read on Medium</span></a>
           </article>
           <article class="writing-card">
             <p class="eyebrow">RELIABLE MESSAGING</p>
-            <h3><a href="https://medium.com/stackademic/your-database-committed-your-message-never-left-817818fc7fa6" target="_blank" rel="noopener noreferrer">Your Database Committed. Your Message Never Left.</a></h3>
+            <h3 id="article-817818fc7fa6">Your Database Committed. Your Message Never Left.</h3>
             <p>What can go wrong between committing a database transaction and publishing the event that other services depend on.</p>
+            <a class="writing-article-link" href="https://medium.com/stackademic/your-database-committed-your-message-never-left-817818fc7fa6" target="_blank" rel="noopener noreferrer" aria-labelledby="article-817818fc7fa6-link article-817818fc7fa6"><span id="article-817818fc7fa6-link">Read on Medium</span></a>
           </article>
           <article class="writing-card">
             <p class="eyebrow">FAILURE ANALYSIS</p>
-            <h3><a href="https://medium.com/&#64;tiwarisaket3/eight-failure-modes-and-the-four-bugs-underneath-them-9d7faa3dd4ce" target="_blank" rel="noopener noreferrer">Eight Failure Modes and the Four Bugs Underneath Them</a></h3>
+            <h3 id="article-9d7faa3dd4ce">Eight Failure Modes and the Four Bugs Underneath Them</h3>
             <p>A look at how different failure symptoms can trace back to the same underlying bugs.</p>
+            <a class="writing-article-link" href="https://medium.com/&#64;tiwarisaket3/eight-failure-modes-and-the-four-bugs-underneath-them-9d7faa3dd4ce" target="_blank" rel="noopener noreferrer" aria-labelledby="article-9d7faa3dd4ce-link article-9d7faa3dd4ce"><span id="article-9d7faa3dd4ce-link">Read on Medium</span></a>
           </article>
         </div>
         <p class="writing-footer"><a class="writing-cta" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
