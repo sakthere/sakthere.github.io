@@ -36,6 +36,10 @@
   background-color: var(--color-surface);
 }
 
+:root[data-theme="dark"] #contact > .copy-status {
+  color: var(--color-background);
+}
+
 .theme-toggle {
   position: relative;
   display: grid;
