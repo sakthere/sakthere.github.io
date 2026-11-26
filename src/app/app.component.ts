@@ -4,7 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   standalone: true,
   template: `
-    <header class="site-header"><a class="wordmark" href="#top">ST<span>.</span></a><nav aria-label="Primary"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Expertise</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav><a class="header-link" href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></header>
+    <header class="site-header"><a class="wordmark" href="#top">ST<span>.</span></a><nav aria-label="Primary"><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Expertise</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav><div class="header-actions"><a class="header-link" href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a>
+      <button type="button" class="theme-toggle" aria-label="Nordic Midnight dark mode" [attr.aria-pressed]="isDark()" (click)="toggleTheme()">
+        <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.2A9 9 0 0 1 8.8 3.4 9 9 0 1 0 20.6 15.2Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+    </div></header>
     <main id="top">
       <section class="hero section">
         <div class="hero-copy">
@@ -108,6 +113,21 @@ import { Component } from '@angular/core';
   styleUrl: '../styles.css'
 })
 export class AppComponent {
+  isDark(): boolean {
+    return document.documentElement.dataset['theme'] === 'dark';
+  }
+
+  toggleTheme(): void {
+    const theme = this.isDark() ? 'light' : 'dark';
+    document.documentElement.classList.add('theme-transition');
+    document.documentElement.dataset['theme'] = theme;
+    try {
+      localStorage.setItem('portfolio-theme', theme);
+    } catch {
+      // The toggle works for this visit without storage.
+    }
+  }
+
   readonly email = 'tiwarisaket3@gmail.com';
   copyStatus = '';
   copyStatusVisible = false;

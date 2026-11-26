@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background: #101923;
+  --color-surface: #172431;
+  --color-surface-alt: #1C2B3A;
+  --color-text-primary: #E9F0F7;
+  --color-text-secondary: #B5C4D3;
+  --color-text-muted: #9AAFC2;
+  --color-accent: #A9CBEF;
+  --color-accent-hover: #D6E9FB;
+  --color-accent-subtle: #253A51;
+  --color-on-accent: #112131;
+  --color-border: #35495C;
+  --color-success: #A1D5C4;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-accent-subtle);
+  border-color: var(--color-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle .theme-sun,
+.theme-toggle[aria-pressed="true"] .theme-moon {
+  opacity: 0;
+  transform: rotate(-25deg) scale(.75);
+}
+
+.theme-toggle[aria-pressed="true"] .theme-sun {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-transition :is(body, .site-header, .section, .role, .project, .writing-card,
+  .skill-grid, .skill-grid article, .contact, footer, a, .button, .theme-toggle, .tags li) {
+    transition: background-color 320ms ease, color 320ms ease, border-color 320ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .theme-toggle svg {
+    transition: opacity 220ms ease, transform 280ms ease;
+  }
+}
