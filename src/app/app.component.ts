@@ -97,9 +97,26 @@ import { Component } from '@angular/core';
         <p class="writing-footer"><a class="text-link" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
       </section>
       <section class="section recognition"><p class="eyebrow">RECOGNITION & EDUCATION</p><div><h2>Thoughtful delivery,<br>recognized impact.</h2><div class="recognition-list"><p><strong>Client appreciation</strong><span>Accenture · Critical production fixes</span></p><p><strong>Insta Award</strong><span>Infosys · Consistent high performance</span></p><p><strong>B.Tech (Honours), Computer Science and Engineering</strong><span>Dr. APJ Abdul Kalam Technical University · 2018–2022 · 8.0/10</span></p></div></div></section>
-      <section id="contact" class="contact"><p class="eyebrow">04 / CONTACT</p><h2>Have an important system to build?</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">tiwarisaket3&#64;gmail.com</a><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
+      <section id="contact" class="contact"><p class="eyebrow">04 / CONTACT</p><h2>Have an important system to build?</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">{{ email }}</a>
+        <div class="contact-actions">
+          <button type="button" class="button" (click)="copyEmail()">Copy email address</button>
+          <a class="text-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tiwarisaket3%40gmail.com" target="_blank" rel="noopener noreferrer">Compose in Gmail</a>
+        </div>
+        <p class="copy-status" role="status">{{ copyStatus }}</p><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
     </main><footer><span>© 2026 Saket Tiwari</span><span>Full Stack .NET Developer · Azure & AI</span></footer>
   `,
   styleUrl: '../styles.css'
 })
-export class AppComponent {}
+export class AppComponent {
+  readonly email = 'tiwarisaket3@gmail.com';
+  copyStatus = '';
+
+  async copyEmail(): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(this.email);
+      this.copyStatus = 'Email address copied.';
+    } catch {
+      this.copyStatus = 'Clipboard unavailable. Select and copy the address above.';
+    }
+  }
+}

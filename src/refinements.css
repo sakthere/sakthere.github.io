@@ -40,6 +40,32 @@
   padding-block: clamp(3rem, 6vw, 5rem);
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.contact-actions button {
+  font: inherit;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-actions button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.contact > .copy-status:not(.eyebrow) {
+  min-height: 1.5em;
+  margin: .5rem auto 0;
+}
+
 .writing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
