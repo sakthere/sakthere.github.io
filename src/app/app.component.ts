@@ -102,7 +102,7 @@ import { Component } from '@angular/core';
           <button type="button" class="button" (click)="copyEmail()">Copy email address</button>
           <a class="text-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tiwarisaket3%40gmail.com" target="_blank" rel="noopener noreferrer">Compose in Gmail</a>
         </div>
-        <p class="copy-status" role="status">{{ copyStatus }}</p><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
+        <p class="copy-status" [class.is-visible]="copyStatusVisible" role="status">{{ copyStatus }}</p><div class="social"><a href="https://www.linkedin.com/in/tiwarisaket3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sakthere" target="_blank" rel="noreferrer">GitHub</a><a href="assets/Saket-Tiwari-Resume.pdf" target="_blank">Resume</a></div></section>
     </main><footer><span>© 2026 Saket Tiwari</span><span>Full Stack .NET Developer · Azure & AI</span></footer>
   `,
   styleUrl: '../styles.css'
@@ -110,19 +110,28 @@ import { Component } from '@angular/core';
 export class AppComponent {
   readonly email = 'tiwarisaket3@gmail.com';
   copyStatus = '';
+  copyStatusVisible = false;
   private copyStatusTimer?: ReturnType<typeof setTimeout>;
+  private copyCleanupTimer?: ReturnType<typeof setTimeout>;
 
   async copyEmail(): Promise<void> {
     try {
       await navigator.clipboard.writeText(this.email);
       clearTimeout(this.copyStatusTimer);
+      clearTimeout(this.copyCleanupTimer);
       this.copyStatus = 'Email address copied.';
+      this.copyStatusVisible = true;
       this.copyStatusTimer = setTimeout(() => {
+        this.copyStatusVisible = false;
+      }, 1500);
+      this.copyCleanupTimer = setTimeout(() => {
         this.copyStatus = '';
       }, 2000);
     } catch {
       clearTimeout(this.copyStatusTimer);
+      clearTimeout(this.copyCleanupTimer);
       this.copyStatus = 'Clipboard unavailable. Select and copy the address above.';
+      this.copyStatusVisible = true;
     }
   }
 }

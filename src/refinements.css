@@ -62,8 +62,36 @@
 }
 
 .contact > .copy-status:not(.eyebrow) {
-  min-height: 1.5em;
-  margin: .5rem auto 0;
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  z-index: 10;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto;
+  padding: .75rem 1.125rem;
+  border: 1px solid var(--color-border);
+  border-radius: .625rem;
+  background: var(--color-text-primary);
+  color: var(--color-on-accent);
+  box-shadow: 0 .375rem 1.25rem color-mix(in srgb, var(--color-text-primary) 20%, transparent);
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact > .copy-status.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .copy-status {
+    transition: opacity 480ms ease-out;
+  }
+
+  .copy-status.is-visible {
+    transition-duration: 160ms;
+  }
 }
 
 .writing-grid {
