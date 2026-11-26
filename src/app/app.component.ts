@@ -98,7 +98,7 @@ import { Component } from '@angular/core';
             <p>A look at how different failure symptoms can trace back to the same underlying bugs.</p>
           </article>
         </div>
-        <p class="writing-footer"><a class="text-link" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
+        <p class="writing-footer"><a class="writing-cta" href="https://medium.com/&#64;tiwarisaket3" target="_blank" rel="noopener noreferrer">View all articles on Medium</a></p>
       </section>
       <section class="section recognition"><p class="eyebrow">05 / RECOGNITION & EDUCATION</p><div><h2>Thoughtful delivery,<br>recognized impact.</h2><div class="recognition-list"><p><strong>Client appreciation</strong><span>Accenture · Critical production fixes</span></p><p><strong>Insta Award</strong><span>Infosys · Consistent high performance</span></p><p><strong>B.Tech (Honours), Computer Science and Engineering</strong><span>Dr. APJ Abdul Kalam Technical University · 2018–2022 · 8.0/10</span></p></div></div></section>
       <section id="contact" class="contact"><p class="eyebrow">06 / CONTACT</p><h2>Have an important system to build?</h2><p>I’m open to conversations about full-stack engineering, Azure architecture, and AI-enabled product work.</p><a class="contact-email" href="mailto:tiwarisaket3&#64;gmail.com">{{ email }}</a>
